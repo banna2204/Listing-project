@@ -1,0 +1,83 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+  flex: 1;
+}
+
+.navbar{
+  height:5rem;
+  background-color: #fff;
+}
+
+.fa-compass{
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link{
+  color:#222222 !important;
+}
+
+.f-info-links a{
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover{
+  text-decoration: underline;
+}
+.f-info{
+  height:8rem;
+  background-color:#ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.f-socials{
+  font-size: 1.4rem;
+}
+
+.card-body{
+  padding: 0 !important;
+}
+.card-text{
+  color: #222222;
+}
+.card{
+  border: none !important;
+  margin-bottom: 2rem;
+}
+.card-img-top{
+  width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 1rem !important;
+}
+.text-deco{
+  text-decoration: none;
+}
+.card-img-overlay{
+  opacity: 0;
+}
+.card-img-overlay:hover{
+  opacity: 0.2;
+  background-color: #fff;
+}
+.add-btn{
+  background-color:#fe424d !important;
+  border: none;
+  color: #fff !important;
+}
+.btns{
+  display: flex;
+  gap: 10px;
+}
+.btn-dark{
+  padding: 10px 15px !important;
+}
+
+.card-top{
+  width: 30rem !important;
+  object-fit: cover !important;
+}
