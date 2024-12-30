@@ -1,0 +1,102 @@
+<% layout('/layouts/boilerplate') %>
+
+
+<style>
+  .filters{
+    display: flex;
+    height: 90px;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .filter{
+    text-align: center;
+    opacity: 0.7;
+  }
+  .filter:hover{
+    opacity: 1;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .filter p {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .taxInfo{
+    display: none;
+  }
+  .tax-toogle{
+    border: 1px solid black;
+    padding: 0.7rem;
+    border-radius: 15px;
+    margin-left: 4rem;
+  }
+
+</style>
+
+<div class="filters">
+  <div class="filter">
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p>Trending</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-bed"></i></div>
+    <p>Rooms</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-mountain-city"></i></div>
+    <p>Iconic Cities</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-mountain"></i></div>
+    <p>Mountain</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-chess-rook"></i></div>
+    <p>Castles</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-person-swimming"></i></i></div>
+    <p>Amazing Pools</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-campground"></i></div>
+    <p>Camping</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-tractor"></i></div>
+    <p>Farms</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-snowflake"></i></div>
+    <p>Arctic</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-igloo"></i></div>
+    <p>Domes</p>
+  </div>
+  <div class="filter">
+    <div><i class="fa-solid fa-circle-chevron-right"></i></div>
+    <p>More</p>
+  </div>
+</div>
+
+
+  <div class="cards ms-auto">
+    <% for(let listing of allListings){ %>
+      <div class="card listing-card" style="width: 20rem;">
+        <a href="/listings/<%= listing._id %>">
+          <img src=<%=listing.image.url%> class="card-img-top" alt="listing-image" style="height: 18rem;">
+          <div class="card-body">
+            <h5 class="card-text title">
+              <%=listing.title%>
+            </h5>
+            <div class="price">
+              <%= (listing.price || 0) %> / night
+            </div>
+          </div>
+        </a>
+        </div>
+      <% } %>
+  </div>

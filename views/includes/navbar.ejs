@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse responsiveNavbar" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/listings">Explore</a>
+        </li>
+      </ul>
+      <form class="d-flex searchResponsive ms-md-auto" role="search">
+        <input class="form-control me-2 px-5 rounded-pill" type="search" placeholder="Search destinations" aria-label="Search">
+        <button class="btn btn-outline-success rounded-pill" type="submit">Search</button>
+      </form>
+      <form class="ms-auto" method="get" action="/listings/new">
+        <Button class="btn btn-transparent">Airbnb your home</Button>
+      </form>
+      <% if(!currUser) {%>
+      <form method="get" action="/signup">
+        <Button class="btn btn-transparent"><b>SignUp</b></Button>
+      </form>
+      <form method="get" action="/login">
+        <Button class="btn btn-transparent"><b>Login</b></Button>
+      </form>
+      <% } %>
+      <% if(currUser) {%>
+      <form method="get" action="/logout">
+        <Button class="btn btn-transparent"><b>LogOut</b></Button>
+      </form>
+      <% } %>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,42 @@
+<% layout('/layouts/boilerplate') %>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <h2 class="mt-2">Edit your listing</h2>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mt-1">
+        <label for="title" class="form-label">Title: </label>
+        <input type="text" id="title" name="listing[title]" class="form-control" value="<%= listing.title %>" required>
+        <div class="valid-feedback">Looks Good!</div>
+      </div>
+      <div class="mt-2">
+        <label for="description" class="form-label">Description: </label>
+        <input name="listing[description]" type="text" id="description" value="<%= listing.description %>"
+          class="form-control" required></input>
+          <div class="invalid-feedback">Description should be valid</div>
+      </div>
+      <div class="mt-2">
+        <label for="image" class="form-label ">Upload New Image: </label>
+        <input type="file" id="image" name="listing[image]" class="form-control" >
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label for="price" class="form-label">Price: </label>
+          <input type="number" id="price" name="listing[price]" class="form-control" value="<%= listing.price %>" required>
+          <div class="invalid-feedback">Price should be required</div>
+        </div>
+        <div class="col-md-8 ">
+          <label for="country" class="form-label">Country: </label>
+          <input type="text" id="country" name="listing[country]" class="form-control" value="<%= listing.country %>" required>
+          <div class="invalid-feedback">Country should be required</div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <label for="location" class="form-label">location: </label>
+        <input type="text" id="location" name="listing[location]" class="form-control" value="<%= listing.location %>" required>
+        <div class="invalid-feedback">Location should be required</div>
+      </div>
+      <button class="btn btn-success my-2 px-5">Edit</button>
+    </form>
+  </div>
+</div>

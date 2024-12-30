@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+  flex: 1;
+}
+
+/* NAVBAR */
+.fa-compass{
+  color: #fe424d;
+  font-size: 2rem;
+}
+.navbar{
+  height: 70px;
+  background-color: white;
+  border-bottom: 1px solid rgb(196, 195, 195);
+}
+
+.nav-link{
+  color:#222222 !important;
+}
+
+@media screen and (max-width:768px) {
+  .navbar{
+    border-bottom: none;
+  }
+  .searchResponsive{
+    width: 360px;
+    margin-left: 8px !important;
+  }
+  .active{
+    margin-left: 10px !important;
+  }
+  .responsiveNavbar{
+      background-color: #fff;
+      width: 400px;
+      z-index: 10;
+      border-bottom: 1px solid rgb(196, 195, 195);
+    }
+}
+
+/* FOOTER */
+.f-info-links a{
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover{
+  text-decoration: underline;
+}
+.f-info{
+  height:8rem;
+  background-color:#ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.f-socials{
+  font-size: 1.4rem;
+}
+
+/* LISTING CARD */
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .cards {
+    margin-top: 20px !important;
+  }
+  .filters{
+    display: none !important;
+  }
+}
+
+.cards a{
+  text-decoration: none;
+
+}
+.card-body{
+  padding: 0 !important;
+}
+.card-text{
+  color: #222222;
+  padding: 5px;
+}
+.listing-card{
+  border: none !important;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.card-img-top{
+  width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 1rem !important;
+}
+
+.title{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0.5;
+  margin-top: 5px;
+}
+.price{
+  line-height: 1 !important;
+  color: black;
+}
+
+.line-height{
+  line-height: 0 !important;
+}
+
+@media only screen and (min-width: 1380px) {
+  .card{
+    width: 22rem !important;
+  }
+}
+@media only screen and (min-width: 590px) and (max-width: 768px) {
+  .card {
+    width: 25rem !important;
+  }
+}
+
+
+.btn-danger{
+  width: 150px !important;
+}
+
+.btn-dark{
+  width: 150px !important;
+}
+.align{
+  display: flex;
+  gap: 100px;
+  margin-bottom: 8px;
+}
+.btn-transparent:focus{
+  outline: none;
+  border: none;
+}
