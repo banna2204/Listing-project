@@ -31,7 +31,7 @@ body{
     border-bottom: none;
   }
   .searchResponsive{
-    width: 360px;
+    width: 260px;
     margin-left: 8px !important;
   }
   .active{
@@ -121,7 +121,7 @@ body{
 
 @media only screen and (min-width: 1380px) {
   .card{
-    width: 22rem !important;
+    width: 25rem !important;
   }
 }
 @media only screen and (min-width: 590px) and (max-width: 768px) {

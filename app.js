@@ -28,11 +28,11 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'/public')));
 
-// const DB_URL = 'mongodb://127.0.0.1:27017/newWanderlust';
-const db_url = process.env.ATLASDB_URL;
+const DB_URL = 'mongodb://127.0.0.1:27017/newWanderlust';
+// const db_url = process.env.ATLASDB_URL;
 
 async function main(){
-  await mongoose.connect(db_url);
+  await mongoose.connect(DB_URL);
 }
 
 main().then(()=>{
@@ -42,21 +42,21 @@ main().then(()=>{
   console.log(err);
 })
 
-app.get('/',(req,res)=>{
-  res.send('hello');
-})
+// app.get('/',(req,res)=>{
+//   res.send('hello');
+// })
 
 
-const store = MongoStore.create({
-  mongoUrl:db_url,
-  crypto:{
-    secret:process.env.SECRET,
-  },
-  touchAfter:24*3600,
-})
+// const store = MongoStore.create({
+//   mongoUrl:db_url,
+//   crypto:{
+//     secret:process.env.SECRET,
+//   },
+//   touchAfter:24*3600,
+// })
 
 const sessionOptions = {
-  store,
+  // store,
   secret:process.env.SECRET,
   resave:false,
   saveUninitialized:true,
