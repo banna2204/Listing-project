@@ -42,10 +42,6 @@ main().then(()=>{
   console.log(err);
 })
 
-// app.get('/',(req,res)=>{
-//   res.send('hello');
-// })
-
 
 const store = MongoStore.create({
   mongoUrl:db_url,
@@ -83,6 +79,10 @@ app.use((req,res,next)=>{
   res.locals.error = req.flash('error');
   res.locals.currUser = req.user;
   next();
+})
+
+app.get('/',(req,res)=>{
+  res.render('user/login.ejs');
 })
 
 app.use('/listings',listingRouter);
