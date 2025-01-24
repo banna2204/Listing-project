@@ -15,7 +15,7 @@ router.route('/')
 .post(isLoggedIn,upload.single('listing[image]'),asyncwrap(listingController.create));
 
 // New
-router.get('/new',isLoggedIn,asyncwrap( listingController.new));
+router.get('/new',isLoggedIn,asyncwrap(listingController.new));
 
 //Show , Delete and UPDATE
 router.route('/:id')

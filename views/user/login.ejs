@@ -1,8 +1,19 @@
 <% layout('/layouts/boilerplate') %>
 
 <style>
-  a{
-    font-size: 14px;
+  .anchor{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid rgb(77, 73, 73);
+    padding: 8px 20px;
+    width: 40px;
+    border-radius: 7px;
+    font-weight: 500;
+
+    &:hover{
+      border: 2px solid rgb(18, 18, 18);
+    }
   }
 </style>
 
@@ -21,7 +32,7 @@
       </div>
       <button class="btn btn-success mt-2">Login</button>
       <br> <br>
-      <a href="https://listing-p1ov.onrender.com/listings">Skip</a>
+      <a class="anchor" href="https://listing-p1ov.onrender.com/listings">I'll do it later</a>
     </form>
   </div>
 </div>
